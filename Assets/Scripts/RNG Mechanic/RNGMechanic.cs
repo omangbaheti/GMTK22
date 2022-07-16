@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class RNGMechanic : MonoBehaviour
 {
-    public UnityEvent reRollEvent = new UnityEvent();
+    public static readonly UnityEvent<int> ReRollEvent = new UnityEvent<int>();
     
     [SerializeField] private int maxNumber;
 
@@ -19,6 +19,6 @@ public class RNGMechanic : MonoBehaviour
     private void ReRoll()
     {
         _number = Random.Range(1, maxNumber + 1);
-        reRollEvent.Invoke();
+        ReRollEvent.Invoke(_number);
     }
 }

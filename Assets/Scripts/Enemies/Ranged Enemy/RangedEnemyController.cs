@@ -15,7 +15,6 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     [SerializeField] private Transform bullet;
     [SerializeField] private Transform bulletDirection;
     
-
     private Transform _lookAtTarget;
     private Transform _target;
     private Transform _transform;
