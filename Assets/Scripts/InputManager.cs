@@ -7,8 +7,8 @@ public class InputManager : MonoBehaviour
 {
     public static event Action<Vector3> MovementDirection;
     public static event Action Shoot;
-    public static event Action<Vector3> ShootingVector; 
-    
+    public static event Action<Vector3> PlayerFacingDirection;
+
     private Vector2 shootingDirection;
     private bool shoot;
     private Camera mainCamera;
@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         PollMovementDirection();
-        PollShootDirection();
+        PollPlayerDirection();
         PollShoot();
     }
     
@@ -34,13 +34,13 @@ public class InputManager : MonoBehaviour
         MovementDirection?.Invoke(movementDirection);
     }
 
-    private void PollShootDirection()
+    private void PollPlayerDirection()
     {
         Ray mouseCoordinates = mainCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(mouseCoordinates, out RaycastHit hit))
         {
             Vector3 shootDirection = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
-            ShootingVector.Invoke(shootDirection);
+            PlayerFacingDirection.Invoke(shootDirection);
         }
     }
     

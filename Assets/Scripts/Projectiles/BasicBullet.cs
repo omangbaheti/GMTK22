@@ -11,10 +11,5 @@ public class BasicBullet : Projectile
         bulletRigidBody.velocity += transform.forward * bulletSpeed;
         Destroy(gameObject, bulletLife);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

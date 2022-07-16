@@ -15,13 +15,8 @@ public abstract class LongRangeWeapon : MonoBehaviour
     private void Start()
     {
         InputManager.Shoot += Shoot;
-        InputManager.ShootingVector += InterpolateWeapon;
     }
     
-    protected void InterpolateWeapon(Vector3 shootingDirection)
-    {
-        transform.forward = shootingDirection;
-    }
 
     protected virtual void  Shoot()
     {
@@ -41,7 +36,6 @@ public abstract class LongRangeWeapon : MonoBehaviour
     public void OnDisable()
     {
         InputManager.Shoot -= Shoot;
-        InputManager.ShootingVector -= InterpolateWeapon;
     }
     
 }
