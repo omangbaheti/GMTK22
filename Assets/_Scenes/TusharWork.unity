@@ -1085,6 +1085,26 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1425160170}
+    - target: {fileID: 3160180692339945659, guid: 005bb1259a8b1ef45be8485b2fb73743,
+        type: 3}
+      propertyPath: minRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160180692339945659, guid: 005bb1259a8b1ef45be8485b2fb73743,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160180692339945659, guid: 005bb1259a8b1ef45be8485b2fb73743,
+        type: 3}
+      propertyPath: moveBackSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160180692339945659, guid: 005bb1259a8b1ef45be8485b2fb73743,
+        type: 3}
+      propertyPath: moveForwardSpeed
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3160180692339945663, guid: 005bb1259a8b1ef45be8485b2fb73743,
         type: 3}
       propertyPath: m_RootOrder
@@ -1139,6 +1159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562604084106292378, guid: 005bb1259a8b1ef45be8485b2fb73743,
+        type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 005bb1259a8b1ef45be8485b2fb73743, type: 3}
@@ -1211,8 +1236,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6651348325715596943, guid: 43e7880a714a364409a848067df2e2fb,
         type: 3}
+      propertyPath: speed
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651348325715596943, guid: 43e7880a714a364409a848067df2e2fb,
+        type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1425160170}
+    - target: {fileID: 6651348325715596943, guid: 43e7880a714a364409a848067df2e2fb,
+        type: 3}
+      propertyPath: minRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651348325715596943, guid: 43e7880a714a364409a848067df2e2fb,
+        type: 3}
+      propertyPath: moveBackSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651348325715596943, guid: 43e7880a714a364409a848067df2e2fb,
+        type: 3}
+      propertyPath: moveForwardSpeed
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589866162019286093, guid: 43e7880a714a364409a848067df2e2fb,
+        type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e7880a714a364409a848067df2e2fb, type: 3}
