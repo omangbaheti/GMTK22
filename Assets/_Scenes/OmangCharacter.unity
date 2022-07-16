@@ -278,9 +278,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389493281}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9430001, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.2, z: 0.225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9}
+  m_LocalScale: {x: 0.225, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 14058378}
@@ -399,7 +399,6 @@ MonoBehaviour:
   bulletProjectile: {fileID: 2747230698573311905, guid: 388502d6df9661b4995c52472b81b898,
     type: 3}
   cooldownTime: 0.01
-  bulletSpeed: 10
 --- !u!1 &1425160165
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,19 +11,14 @@ public class Player : MonoBehaviour
 
     private void OnEnable()
     {
-        InputManager.MovementDirection += Movement;
-        InputManager.Shoot += Shoot;
+        InputManager.MovementDirection += Movement; 
     }
 
     void Start()
     {
         character = GetComponent<CharacterController>();
     }
-
-    private void Shoot()
-    {
-        
-    }
+    
 
     private void Movement(Vector3 movementDirection)
     {
@@ -34,6 +29,5 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         InputManager.MovementDirection -= Movement;
-        InputManager.Shoot -= Shoot;
     }
 }

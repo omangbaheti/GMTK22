@@ -8,7 +8,7 @@ public class LongRangeWeapon : MonoBehaviour
     [SerializeField] private Transform bulletSpawner;
     [SerializeField] private GameObject bulletProjectile;
     [SerializeField] private float cooldownTime = 0.01f;
-    [SerializeField] private float bulletSpeed = 10f;
+    
     private Camera mainCamera;
     private Vector3 shootDirection;
     private Transform playerTransform;
@@ -31,7 +31,7 @@ public class LongRangeWeapon : MonoBehaviour
         if (Physics.Raycast(mouseCoordinates, out RaycastHit hit))
         {
             shootDirection = new Vector3(hit.point.x, transform.position.y, hit.point.z) - transform.position;
-            transform.right = shootDirection;
+            transform.forward = shootDirection;
         }
 
     }
@@ -40,10 +40,9 @@ public class LongRangeWeapon : MonoBehaviour
     {
         if(!canShoot) return;
         canShoot = false;
-        GameObject bullet = Instantiate(bulletProjectile,bulletSpawner.position, Quaternion.identity);
-        Rigidbody bulletRigidBody = bullet.GetComponent<Rigidbody>();
-        bulletRigidBody.velocity = shootDirection.normalized * bulletSpeed;
-        Destroy(bullet, 5);
+        GameObject bullet = Instantiate(bulletProjectile,bulletSpawner.position, bulletSpawner.rotation);
+        Rigidbody bulletRigidBody = GetComponent<Rigidbody>();
+        //bulletRigidBody.velocity = shootDirection.normalized * bulletSpeed;
         StartCoroutine(nameof(Cooldown));
     }
 
