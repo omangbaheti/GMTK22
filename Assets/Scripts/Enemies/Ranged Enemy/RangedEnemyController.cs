@@ -38,6 +38,10 @@ public class RangedEnemyController : MonoBehaviour, IHealth
             health += healthValues[number];
 
         moveForwardSpeed = speedValues[number];
+
+        CancelInvoke(nameof(PerformAction));
+        attackRate = .1f;
+        InvokeRepeating(nameof(PerformAction), attackRate, attackRate);
     }
     
     private void Start()
