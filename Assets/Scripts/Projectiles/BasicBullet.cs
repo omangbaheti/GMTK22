@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BasicBullet : Projectile
 {
-    [SerializeField] private float bulletSpeed = 10f;
-    private float bulletLife = 5f;
+    // Start is called before the first frame update
     void Start()
     {
         Rigidbody bulletRigidBody = GetComponent<Rigidbody>();
