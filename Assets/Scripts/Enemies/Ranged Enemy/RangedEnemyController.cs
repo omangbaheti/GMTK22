@@ -12,9 +12,12 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     [SerializeField] private float attackRate;
     [SerializeField] private float moveForwardSpeed;
     [SerializeField] private float moveBackSpeed;
-    [SerializeField] private Transform target;
     [SerializeField] private Transform bullet;
+    [SerializeField] private Transform bulletDirection;
+    
 
+    private Transform _lookAtTarget;
+    private Transform _target;
     private Transform _transform;
     private bool _inRange;
     private NavMeshAgent _agent;
@@ -36,15 +39,22 @@ public class RangedEnemyController : MonoBehaviour, IHealth
 
         _agent = GetComponent<NavMeshAgent>();
         
+        _target = _lookAtTarget = GameObject.FindGameObjectWithTag("Player").transform;
+        
         if (enemyType != EnemyType.Healer) return;
         if (transform.GetComponent<HealerEnemy>() == null)
             transform.AddComponent<HealerEnemy>();
-        target = GetComponent<HealerEnemy>().GetClosestEnemy(enemies);
+        _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(enemies);
     }
 
     private void Update()
     {
-        _transform.LookAt(target);
+        _transform.LookAt(_target);
+
+        if (enemyType == EnemyType.Healer)
+        {
+            transform.GetChild(0).LookAt(_lookAtTarget);   
+        }
 
         if (_moveBack)
             transform.Translate(Vector3.back * moveBackSpeed * Time.deltaTime);
@@ -56,15 +66,15 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         }
 
         _agent.speed = moveForwardSpeed;
-        _agent.destination = target.position;
+        _agent.destination = _target.position;
     }
 
     private void PerformAction()
     {
-        float distance = Vector3.Distance(_transform.position, target.position);
+        float distance = Vector3.Distance(_transform.position, _target.position);
         _inRange = distance <= range;
         if (!_inRange) return;
-        Instantiate(bullet, _transform.position, _transform.rotation);
+        Instantiate(bullet, _transform.position, bulletDirection.rotation);
         _moveBack = distance < minRange;
     }
 

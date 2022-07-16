@@ -721,7 +721,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 2
-  enemies: []
+  enemies:
+  - {fileID: 3160180692339945636, guid: 005bb1259a8b1ef45be8485b2fb73743, type: 3}
+  - {fileID: 6651348325715596938, guid: 43e7880a714a364409a848067df2e2fb, type: 3}
 --- !u!1 &1425160165
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +741,7 @@ GameObject:
   - component: {fileID: 1425160172}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1112,7 +1114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 2
-  enemies: []
+  enemies:
+  - {fileID: 3160180692339945636, guid: 005bb1259a8b1ef45be8485b2fb73743, type: 3}
+  - {fileID: 6651348325715596938, guid: 43e7880a714a364409a848067df2e2fb, type: 3}
 --- !u!4 &1912102920
 Transform:
   m_ObjectHideFlags: 0
@@ -1158,7 +1162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 2
-  enemies: []
+  enemies:
+  - {fileID: 3160180692339945636, guid: 005bb1259a8b1ef45be8485b2fb73743, type: 3}
+  - {fileID: 6651348325715596938, guid: 43e7880a714a364409a848067df2e2fb, type: 3}
 --- !u!4 &1932718711
 Transform:
   m_ObjectHideFlags: 0
@@ -1301,11 +1307,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healer
       objectReference: {fileID: 0}
-    - target: {fileID: 3160180692339945659, guid: 005bb1259a8b1ef45be8485b2fb73743,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1425160170}
     - target: {fileID: 3160180692339945663, guid: 005bb1259a8b1ef45be8485b2fb73743,
         type: 3}
       propertyPath: m_RootOrder
