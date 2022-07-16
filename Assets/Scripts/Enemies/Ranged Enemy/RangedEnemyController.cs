@@ -1,9 +1,13 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class RangedEnemyController : MonoBehaviour, IHealth
 {
+    [SerializeField] private float[] healthValues;
+    [SerializeField] private int[] speedValues;
+    
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private float maxHealth;
     [SerializeField] private float health;
@@ -15,7 +19,6 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     [SerializeField] private Transform bullet;
     [SerializeField] private Transform bulletDirection;
     
-
     private Transform _lookAtTarget;
     private Transform _target;
     private Transform _transform;
@@ -27,9 +30,24 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     {
         Healer, Ranged, Melee
     }
+    private void ChangeEnemyProperties(int number)
+    {
+        if (number < 3)
+            health -= healthValues[number];
+        else
+            health += healthValues[number];
+
+        moveForwardSpeed = speedValues[number];
+
+        CancelInvoke(nameof(PerformAction));
+        attackRate = .1f;
+        InvokeRepeating(nameof(PerformAction), attackRate, attackRate);
+    }
     
     private void Start()
     {
+        RNGMechanic.ReRollEvent.AddListener(ChangeEnemyProperties);
+        
         health = maxHealth;
         _transform = transform;
 
