@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 35cf21a708771864d98303a38f8d509c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,11 +112,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 1
-  maxHealth: 0
+  maxHealth: 10
   health: 10
   range: 5
+  minRange: 4
   attackRate: 0.1
-  speed: 2
+  moveForwardSpeed: 3.5
+  moveBackSpeed: 5
   target: {fileID: 0}
   bullet: {fileID: 2747230698573311964, guid: 388502d6df9661b4995c52472b81b898, type: 3}
 --- !u!195 &8589866162019286093
