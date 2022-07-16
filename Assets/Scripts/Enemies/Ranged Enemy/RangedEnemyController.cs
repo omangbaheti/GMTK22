@@ -8,7 +8,6 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     [SerializeField] private float[] healthValues;
     [SerializeField] private int[] speedValues;
     [SerializeField] private float[] attackRates;
-    
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private float maxHealth;
     [SerializeField] private float health;
@@ -21,6 +20,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     [SerializeField] private Transform bulletDirection;
     
     private Transform _lookAtTarget;
+    private EnemyProperties _enemyProperties;
     private Transform _target;
     private Transform _transform;
     private bool _inRange;
@@ -39,15 +39,25 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         else
             health += healthValues[number];
 
+        _enemyProperties.health = health;
+        
         moveForwardSpeed = speedValues[number];
+        _enemyProperties.speed = moveForwardSpeed;
 
         CancelInvoke(nameof(PerformAction));
         attackRate = attackRates[number];
+        _enemyProperties.attackRate = attackRate;
         InvokeRepeating(nameof(PerformAction), attackRate, attackRate);
     }
     
     private void Start()
     {
+        _enemyProperties = GameObject.FindGameObjectWithTag("Enemy Properties").GetComponent<EnemyProperties>();
+        
+        health = _enemyProperties.health;
+        attackRate = _enemyProperties.attackRate;
+        moveForwardSpeed = _enemyProperties.speed;
+
         RNGMechanic.ReRollEvent.AddListener(ChangeEnemyProperties);
         
         health = maxHealth;
@@ -80,7 +90,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         _inRange = _distance <= range;
 
         if (_moveBack)
-            transform.Translate(Vector3.back * moveBackSpeed * Time.deltaTime);
+            transform.Translate(Vector3.back * (moveBackSpeed * Time.deltaTime));
 
         if (_inRange)
         {
