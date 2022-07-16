@@ -11,7 +11,7 @@ public class CameraOffset : MonoBehaviour
 
     private void Start()
     {
-        InputManager.ShootingVector += CheckCameraOffset;
+        InputManager.PlayerFacingDirection += CheckCameraOffset;
         
     }
 
