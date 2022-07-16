@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RangedEnemyController : MonoBehaviour, IHealth
 {
@@ -14,6 +15,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
 
     private Transform _transform;
     private bool _inRange;
+    private NavMeshAgent _agent;
     
     private enum EnemyType
     {
@@ -29,21 +31,19 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         
         InvokeRepeating($"PerformAction", attackRate, attackRate);
 
-        if (enemyType == EnemyType.Healer)
-        {
-            if (transform.GetComponent<HealerEnemy>() == null)
-                transform.AddComponent<HealerEnemy>();
-            target = GetComponent<HealerEnemy>().GetClosestEnemy(enemies);
-        }
-
-        print(target.name);
+        _agent = GetComponent<NavMeshAgent>();
+        
+        if (enemyType != EnemyType.Healer) return;
+        if (transform.GetComponent<HealerEnemy>() == null)
+            transform.AddComponent<HealerEnemy>();
+        target = GetComponent<HealerEnemy>().GetClosestEnemy(enemies);
     }
 
     private void Update()
     {
         _transform.LookAt(target);
         if (_inRange) return;
-        transform.Translate(Vector3.forward * (speed * Time.deltaTime));
+        _agent.destination = target.position;
     }
 
     private void PerformAction()
