@@ -7,6 +7,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
 {
     [SerializeField] private float[] healthValues;
     [SerializeField] private int[] speedValues;
+    [SerializeField] private float[] attackRates;
     
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private float maxHealth;
@@ -25,6 +26,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     private bool _inRange;
     private NavMeshAgent _agent;
     private bool _moveBack;
+    private float _distance;
     
     private enum EnemyType
     {
@@ -40,7 +42,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         moveForwardSpeed = speedValues[number];
 
         CancelInvoke(nameof(PerformAction));
-        attackRate = .1f;
+        attackRate = attackRates[number];
         InvokeRepeating(nameof(PerformAction), attackRate, attackRate);
     }
     
@@ -73,6 +75,9 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         {
             transform.GetChild(0).LookAt(_lookAtTarget);   
         }
+        _moveBack = _distance < minRange;
+        _distance = Vector3.Distance(_transform.position, _target.position);
+        _inRange = _distance <= range;
 
         if (_moveBack)
             transform.Translate(Vector3.back * moveBackSpeed * Time.deltaTime);
@@ -89,11 +94,8 @@ public class RangedEnemyController : MonoBehaviour, IHealth
 
     private void PerformAction()
     {
-        float distance = Vector3.Distance(_transform.position, _target.position);
-        _inRange = distance <= range;
         if (!_inRange) return;
         Instantiate(bullet, _transform.position, bulletDirection.rotation);
-        _moveBack = distance < minRange;
     }
 
     void IHealth.AffectHealth(float changeInHealth)
