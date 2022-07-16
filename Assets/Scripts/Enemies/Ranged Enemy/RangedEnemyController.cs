@@ -1,14 +1,13 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class RangedEnemyController : MonoBehaviour
+public class RangedEnemyController : MonoBehaviour, IHealth
 {
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private float maxHealth;
     [SerializeField] private float health;
     [SerializeField] private float range;
     [SerializeField] private float attackRate;
-    [SerializeField] private float damageTakenPerBullet;
     [SerializeField] private float speed;
     [SerializeField] private Transform target;
     [SerializeField] private Transform bullet;
@@ -54,19 +53,19 @@ public class RangedEnemyController : MonoBehaviour
         Instantiate(bullet, _transform.position, _transform.rotation);
     }
 
-    public void AffectHealth(float bulletStrength)
+    void IHealth.AffectHealth(float changeInHealth)
     {
         if (enemyType != EnemyType.Healer)
         {
             if (health > 0)
-                health -= bulletStrength;
+                health -= changeInHealth;
             else
                 Destroy(gameObject);
         }
         else
         {
             if (health < maxHealth)
-                health += bulletStrength;
+                health += changeInHealth;
         }
     }
 }
