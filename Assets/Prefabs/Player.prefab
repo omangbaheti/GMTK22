@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2547547323639766126}
-  - component: {fileID: 2547547323639766127}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -33,22 +32,6 @@ Transform:
   m_Father: {fileID: 2547547325341686184}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2547547323639766127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2547547323639766121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc04b691047b0014cb6a7e7562602c4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpawner: {fileID: 2547547323930013128}
-  bulletProjectile: {fileID: 2747230698573311905, guid: 388502d6df9661b4995c52472b81b898,
-    type: 3}
-  cooldownTime: 0.01
 --- !u!1 &2547547323930013131
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,4 +351,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012e67da86a341347b7ed5d98a78f4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 0}
+  innerRadius: 1
+  outerRadius: 4
