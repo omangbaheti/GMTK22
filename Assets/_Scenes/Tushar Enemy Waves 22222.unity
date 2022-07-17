@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxNumber: 6
-  waveManager: {fileID: 0}
+  waveManager: {fileID: 2076943064}
 --- !u!1001 &446763835
 PrefabInstance:
   m_ObjectHideFlags: 0

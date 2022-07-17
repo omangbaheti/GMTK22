@@ -15,6 +15,7 @@ public class WaveManager : MonoBehaviour
 
     private int _wave;
     
+    
     public void EndWave()
     {
         spawners.SetActive(false);

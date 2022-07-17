@@ -12,7 +12,6 @@ public class CameraOffset : MonoBehaviour
     private void Start()
     {
         InputManager.PlayerFacingDirection += CheckCameraOffset;
-        
     }
 
     private void OnDestroy()
