@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/RIshavMainMenu.unity
+    guid: a95a590e8d10df84e80072d06af1ad17
+  - enabled: 1
+    path: Assets/_Scenes/Tushar Enemy Waves.unity
+    guid: 307f8aca4edbe724e86b160014bed554
   m_configObjects: {}
