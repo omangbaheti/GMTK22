@@ -8,18 +8,18 @@ using UnityEngine;
 public class ScoreCounter : MonoBehaviour
 {
     public static Action IncrementScore;
-
     [SerializeField] private TextMeshProUGUI scoreBar;
     
-    private int score = 0;
+    private static int score = 0;
 
-    public int Score
+    public static int Score
     {
         get { return score; }
     }
 
     void Start()
     {
+        DontDestroyOnLoad(this);
         scoreBar = GetComponent<TextMeshProUGUI>();
         scoreBar.text = score.ToString();
         IncrementScore += IncreaseScore;
@@ -28,7 +28,7 @@ public class ScoreCounter : MonoBehaviour
     private void IncreaseScore()
     {
         score++;
-        scoreBar.text = score.ToString();
+        scoreBar.text = $"Score: {score.ToString()}";
     }
 
     private void OnDestroy()
