@@ -95,6 +95,8 @@ MonoBehaviour:
   bulletProjectile: {fileID: 4369337365506048601, guid: 3c8d5629a5747bc4597f227deb8990f7,
     type: 3}
   cooldownTime: 1
+  muzzleFlash: {fileID: 3050377525533290135, guid: a5507e85b455c9442b192b1c8d3f36bb,
+    type: 3}
 --- !u!65 &6971006604807186129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108,5 +110,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-  muzzleFlash: {fileID: 3050377525533290135, guid: a5507e85b455c9442b192b1c8d3f36bb,
-    type: 3}
