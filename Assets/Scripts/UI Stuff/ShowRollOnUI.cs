@@ -17,6 +17,6 @@ public class ShowRollOnUI : MonoBehaviour
 
     private void UpdateText(int result)
     {
-        text.text = result.ToString();
+        text.text = (result + 1).ToString();
     }
 }
