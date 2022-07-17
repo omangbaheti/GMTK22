@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 6820275522049745685}
   - component: {fileID: 6820275522049745684}
   - component: {fileID: 6096936365116858933}
+  - component: {fileID: 1441832202189313421}
   m_Layer: 0
   m_Name: MachineGun
   m_TagString: Player
@@ -94,3 +95,18 @@ MonoBehaviour:
   bulletProjectile: {fileID: 2747230698573311905, guid: 388502d6df9661b4995c52472b81b898,
     type: 3}
   cooldownTime: 0.08
+  muzzleFlash: {fileID: 0}
+--- !u!114 &1441832202189313421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820275522049745686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e467bbba1ca784c9aa1eae59589ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 843a410796f517f45884d382c612173d, type: 3}
+  playOnAwake: 0
