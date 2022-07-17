@@ -13,6 +13,11 @@ public class MenuAndSettings : MonoBehaviour
 
     public void ShowPanel(GameObject targetPanel)
     {
+        if (Time.timeScale == 0f)
+            Time.timeScale = 1f;
+        else
+            Time.timeScale = 0f;
+        
         if(targetPanel!=null)
         {
             targetPanel.SetActive(true);
