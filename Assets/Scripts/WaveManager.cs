@@ -33,7 +33,7 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator StartWave()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(4f);
         _wave++;
         enemiesSpawned = 0;
         spawners.SetActive(true);
