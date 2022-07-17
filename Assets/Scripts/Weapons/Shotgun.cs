@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shotgun : LongRangeWeapon
@@ -15,6 +13,9 @@ public class Shotgun : LongRangeWeapon
         {
             int spawnPosition = i - noOfBullets/2;
             Quaternion offset = Quaternion.Euler(0f, spawnPosition * spreadAngle, 0f);
+            GameObject muzzleFlash = Instantiate(base.muzzleFlash, bulletSpawner.position, bulletSpawner.rotation);
+            Destroy(muzzleFlash, .1f);
+
             GameObject bullet = Instantiate(bulletProjectile,bulletSpawner.position, bulletSpawner.rotation * offset);
         }
         StartCoroutine(nameof(Cooldown));

@@ -9,6 +9,7 @@ TagManager:
   - Enemy Properties
   - Healer Enemy
   - Ranged Enemy
+  - Cinemachine
   layers:
   - Default
   - TransparentFX

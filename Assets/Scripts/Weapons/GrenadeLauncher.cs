@@ -11,7 +11,11 @@ public class GrenadeLauncher : LongRangeWeapon
     {
         if(!canShoot) return;
         canShoot = false;
+        
         GameObject bullet = Instantiate(bulletProjectile,bulletSpawner.position, bulletSpawner.rotation);
+        GameObject muzzleFlash = Instantiate(base.muzzleFlash, bulletSpawner.position, bulletSpawner.rotation);
+        Destroy(muzzleFlash, .1f);
         StartCoroutine(nameof(Cooldown));
     }
+    
 }

@@ -131,3 +131,5 @@ MonoBehaviour:
   bulletLife: 0.5
   damage: 10
   target: Player
+  explosion: {fileID: 1003223988139939606, guid: 8509e8b76de01c14c8b997d7ae9d6bd5,
+    type: 3}

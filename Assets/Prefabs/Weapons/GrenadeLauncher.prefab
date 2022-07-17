@@ -94,3 +94,5 @@ MonoBehaviour:
   bulletProjectile: {fileID: 4369337365506048601, guid: 3c8d5629a5747bc4597f227deb8990f7,
     type: 3}
   cooldownTime: 1
+  muzzleFlash: {fileID: 3050377525533290135, guid: a5507e85b455c9442b192b1c8d3f36bb,
+    type: 3}
