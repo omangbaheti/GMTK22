@@ -8,14 +8,12 @@ public class Grenade : Projectile
 {
     [SerializeField] private float upwardThrust;
     [SerializeField] private float impactRadius = 4f;
-    private CapsuleCollider collider;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody bulletRigidBody = GetComponent<Rigidbody>();
-        collider = GetComponent<CapsuleCollider>();
         bulletRigidBody.AddForce(transform.forward * bulletSpeed + transform.up * upwardThrust, ForceMode.Impulse);
     }
 

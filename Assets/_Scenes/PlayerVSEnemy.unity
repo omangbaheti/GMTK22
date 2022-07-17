@@ -134,28 +134,14 @@ GameObject:
   - component: {fileID: 354874641}
   - component: {fileID: 354874640}
   - component: {fileID: 354874639}
-  - component: {fileID: 354874638}
+  - component: {fileID: 354874642}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!64 &354874638
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354874637}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &354874639
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -221,6 +207,19 @@ Transform:
   m_Father: {fileID: 1716481410}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &354874642
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354874637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1.1821784, z: 10}
+  m_Center: {x: 0, y: -0.5910892, z: 0}
 --- !u!1 &440834582
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +342,7 @@ PrefabInstance:
     - target: {fileID: 8881633015996984991, guid: e4587fa211e93a149b5af1d9a01475a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.12266
+      value: 63.982662
       objectReference: {fileID: 0}
     - target: {fileID: 8881633015996984991, guid: e4587fa211e93a149b5af1d9a01475a5,
         type: 3}
@@ -803,7 +802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696525365}
   m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
-  m_LocalPosition: {x: -0.031998813, y: 59.12266, z: -88.89938}
+  m_LocalPosition: {x: -0.031998813, y: 63.982662, z: -88.89938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1295,7 +1294,7 @@ PrefabInstance:
     - target: {fileID: 2547547325341686184, guid: 48d85df4a2a7c28418ba2a5fa36b8b43,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.85
+      value: 5.71
       objectReference: {fileID: 0}
     - target: {fileID: 2547547325341686184, guid: 48d85df4a2a7c28418ba2a5fa36b8b43,
         type: 3}
