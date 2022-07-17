@@ -25,7 +25,6 @@ public abstract class LongRangeWeapon : MonoBehaviour
         Debug.Log("ShootCalled");
         if(!canShoot) return;
         canShoot = false;
-        
         StartCoroutine(nameof(Cooldown));
     }
 
