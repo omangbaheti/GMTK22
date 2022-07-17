@@ -760,6 +760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: beb46c7eceb949f468f0824302adf281, type: 3}
+  playOnAwake: 0
 --- !u!1 &847627626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: beb46c7eceb949f468f0824302adf281, type: 3}
+  playOnAwake: 0
 --- !u!1 &985092319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: beb46c7eceb949f468f0824302adf281, type: 3}
+  playOnAwake: 0
 --- !u!1 &1082953269 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8003010762644274904, guid: a11c1c6f68ef6f9478510a380d73052f,
@@ -1274,6 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: beb46c7eceb949f468f0824302adf281, type: 3}
+  playOnAwake: 0
 --- !u!1 &1156149718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,6 +1928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: beb46c7eceb949f468f0824302adf281, type: 3}
+  playOnAwake: 0
 --- !u!1 &1603830519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,6 +2089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: beb46c7eceb949f468f0824302adf281, type: 3}
+  playOnAwake: 0
 --- !u!1 &1635214192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: beb46c7eceb949f468f0824302adf281, type: 3}
+  playOnAwake: 0
 --- !u!1 &1738557644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,8 +2501,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 7945a93bd39f0584296aa9dd6966802d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2821,6 +2828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: beb46c7eceb949f468f0824302adf281, type: 3}
+  playOnAwake: 0
 --- !u!1 &2030981067
 GameObject:
   m_ObjectHideFlags: 0
