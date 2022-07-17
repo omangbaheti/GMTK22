@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
@@ -38,7 +39,7 @@ public class Player : MonoBehaviour, IHealth
 
     private void Update()
     {
-        ApplyGravity();
+        //ApplyGravity();
     }
 
     void ApplyGravity()
@@ -84,5 +85,10 @@ public class Player : MonoBehaviour, IHealth
                 Destroy(gameObject);
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        
     }
 }
