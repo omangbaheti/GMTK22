@@ -22,7 +22,7 @@ public class RNGMechanic : MonoBehaviour
             ReRoll();
     }
 
-    private void ReRoll()
+    public void ReRoll()
     {
         _number = Random.Range(1, maxNumber + 1);
         ReRollEvent.Invoke(_number - 1);

@@ -42,7 +42,8 @@ public class Player : MonoBehaviour, IHealth
     }
     private void Movement(Vector3 movementDirection)
     {
-        character.Move(speed * Time.deltaTime * movementDirection);
+        Vector3 movement = new Vector3(movementDirection.x, -9.81f, movementDirection.z);
+        character.Move(speed * Time.deltaTime * movement);
         player.SetFloat(Speed, movementDirection.magnitude);
     }
     
