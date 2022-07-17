@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2747230698573311904}
   - component: {fileID: 8015227043638676382}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: HealerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,5 +129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 35
   bulletLife: 0.5
-  damage: 10
+  damage: -10
   target: Enemy

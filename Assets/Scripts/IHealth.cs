@@ -1,4 +1,4 @@
 public interface IHealth
 {
-    protected void AffectHealth(float changeInHealth);
+    public void AffectHealth(float changeInHealth);
 }

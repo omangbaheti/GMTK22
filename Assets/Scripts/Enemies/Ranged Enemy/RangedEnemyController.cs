@@ -67,6 +67,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
 
     private void Update()
     {
+        if (_target == null) return;
         _transform.LookAt(_target);
 
         if (enemyType == EnemyType.Healer)
@@ -92,23 +93,21 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         float distance = Vector3.Distance(_transform.position, _target.position);
         _inRange = distance <= range;
         if (!_inRange) return;
-        Instantiate(bullet, _transform.position, bulletDirection.rotation);
+        Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
         _moveBack = distance < minRange;
     }
 
     void IHealth.AffectHealth(float changeInHealth)
     {
-        if (enemyType != EnemyType.Healer)
+        if (health > 0)
         {
-            if (health > 0)
-                health -= changeInHealth;
-            else
+            health -= changeInHealth;
+            if (health.Equals(0) || health < 0)
+            {
+                Debug.Log($"{health}");
                 Destroy(gameObject);
-        }
-        else
-        {
-            if (health < maxHealth)
-                health += changeInHealth;
+            }
         }
     }
 }
+

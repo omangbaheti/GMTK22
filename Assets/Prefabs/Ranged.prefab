@@ -127,7 +127,7 @@ MonoBehaviour:
   attackRate: 0.1
   moveForwardSpeed: 3.5
   moveBackSpeed: 5
-  bullet: {fileID: 2747230698573311964, guid: 388502d6df9661b4995c52472b81b898, type: 3}
+  bullet: {fileID: 2747230698573311964, guid: f72910023f378cd4cbcc253fb69ee27b, type: 3}
   bulletDirection: {fileID: 6651348325715596942}
 --- !u!195 &8589866162019286093
 NavMeshAgent:
