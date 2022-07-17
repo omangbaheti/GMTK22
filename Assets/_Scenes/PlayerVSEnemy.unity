@@ -296,7 +296,7 @@ PrefabInstance:
     - target: {fileID: 8881633015996984991, guid: e4587fa211e93a149b5af1d9a01475a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.272663
+      value: 59.12266
       objectReference: {fileID: 0}
     - target: {fileID: 8881633015996984991, guid: e4587fa211e93a149b5af1d9a01475a5,
         type: 3}
@@ -756,7 +756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696525365}
   m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
-  m_LocalPosition: {x: -0.031998813, y: 59.272663, z: -88.89938}
+  m_LocalPosition: {x: -0.031998813, y: 59.12266, z: -88.89938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1203,7 +1203,7 @@ PrefabInstance:
     - target: {fileID: 2547547325341686184, guid: 48d85df4a2a7c28418ba2a5fa36b8b43,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2547547325341686184, guid: 48d85df4a2a7c28418ba2a5fa36b8b43,
         type: 3}
@@ -1259,10 +1259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healer
       objectReference: {fileID: 0}
-    - target: {fileID: 3160180692339945659, guid: 005bb1259a8b1ef45be8485b2fb73743,
+    - target: {fileID: 3160180692339945636, guid: 005bb1259a8b1ef45be8485b2fb73743,
         type: 3}
-      propertyPath: attackRate
-      value: 4.03
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3160180692339945663, guid: 005bb1259a8b1ef45be8485b2fb73743,
         type: 3}
@@ -1336,7 +1336,7 @@ PrefabInstance:
     - target: {fileID: 6651348325715596938, guid: 43e7880a714a364409a848067df2e2fb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6651348325715596942, guid: 43e7880a714a364409a848067df2e2fb,
         type: 3}
