@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 6562604084106292378}
   m_Layer: 0
   m_Name: Healer
-  m_TagString: Healer Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,8 +129,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.7731116, z: 1}
+  m_Center: {x: 0, y: 0.38655567, z: 0}
 --- !u!114 &3160180692339945659
 MonoBehaviour:
   m_ObjectHideFlags: 0

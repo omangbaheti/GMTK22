@@ -53,7 +53,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
 
     public void ResetEnemies()
     {
-        _enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        _enemies = GameObject.FindGameObjectsWithTag("Ranged Enemy");
         _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(_enemies);
     }
     
@@ -70,7 +70,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         health = maxHealth;
         _transform = transform;
 
-        _enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        _enemies = GameObject.FindGameObjectsWithTag("Ranged Enemy");
         
         InvokeRepeating($"PerformAction", attackRate, attackRate);
 
@@ -81,6 +81,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         if (enemyType != EnemyType.Healer) return;
         if (transform.GetComponent<HealerEnemy>() == null)
             transform.AddComponent<HealerEnemy>();
+        print(_enemies.Length);
         _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(_enemies);
     }
 
@@ -134,7 +135,6 @@ public class RangedEnemyController : MonoBehaviour, IHealth
                 HealerEnemy[] healers = FindObjectsOfType<HealerEnemy>();
                 foreach (var healer in healers)
                     healer.GetComponent<RangedEnemyController>().ResetEnemies();
-                print(healers[0].GetComponent<RangedEnemyController>()._enemies.Length);
             }
         }
     }

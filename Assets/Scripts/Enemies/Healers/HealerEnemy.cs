@@ -11,9 +11,9 @@ public class HealerEnemy : MonoBehaviour
         Vector3 currentPos = transform.position;
         foreach (GameObject t in enemies)
         {
-            float dist = Vector3.Distance(t.transform.position, currentPos);
+            float dist = Vector3.Distance(t.transform.parent.position, currentPos);
             if (!(dist < minDist)) continue;
-            tMin = t.transform;
+            tMin = t.transform.parent;
             minDist = dist;
         }
         return tMin;
