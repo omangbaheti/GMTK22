@@ -67,12 +67,11 @@ public class RangedEnemyController : MonoBehaviour, IHealth
 
     private void Update()
     {
-        if (_target == null) return;
         _transform.LookAt(_target);
 
         if (enemyType == EnemyType.Healer)
         {
-            transform.GetChild(0).LookAt(_lookAtTarget);   
+            transform.GetChild(0).LookAt(_lookAtTarget);
         }
 
         if (_moveBack)
