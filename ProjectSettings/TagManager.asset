@@ -10,6 +10,8 @@ TagManager:
   - Healer Enemy
   - Ranged Enemy
   - Cinemachine
+  - Wave Manager
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
