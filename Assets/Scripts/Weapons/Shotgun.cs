@@ -9,6 +9,7 @@ public class Shotgun : LongRangeWeapon
     {
         if(!canShoot) return;
         canShoot = false;
+        gameObject.GetComponent<PlayOnSpawn>().PlaySound();
         for (int i = 0; i < noOfBullets; i++)
         {
             int spawnPosition = i - noOfBullets/2;

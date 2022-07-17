@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6820275522049745684}
   - component: {fileID: 4548984859082415590}
   - component: {fileID: 6971006604807186129}
+  - component: {fileID: 4036144711076563836}
   m_Layer: 0
   m_Name: GrenadeLauncher
   m_TagString: Player
@@ -110,3 +111,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4036144711076563836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820275522049745686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e467bbba1ca784c9aa1eae59589ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: e847a3f087088eb47b7fc056268f55f7, type: 3}
+  playOnAwake: 0

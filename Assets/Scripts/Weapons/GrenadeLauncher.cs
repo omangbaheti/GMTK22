@@ -11,7 +11,7 @@ public class GrenadeLauncher : LongRangeWeapon
     {
         if(!canShoot) return;
         canShoot = false;
-        
+        gameObject.GetComponent<PlayOnSpawn>().PlaySound();
         GameObject bullet = Instantiate(bulletProjectile,bulletSpawner.position, bulletSpawner.rotation);
         GameObject muzzleFlash = Instantiate(base.muzzleFlash, bulletSpawner.position, bulletSpawner.rotation);
         Destroy(muzzleFlash, .1f);
