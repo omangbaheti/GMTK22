@@ -7,10 +7,11 @@ using UnityEngine;
 public class PlayOnSpawn : MonoBehaviour
 {
     [SerializeField] private AudioClip clip;
+    [SerializeField] private bool playOnAwake;
 
     private void Start()
     {
-        if (clip != null)
+        if (clip != null && playOnAwake)
         {
             SoundManager.Instance.PlaySound(clip);
         }
