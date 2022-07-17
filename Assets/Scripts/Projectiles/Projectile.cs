@@ -45,7 +45,7 @@ public abstract class Projectile : MonoBehaviour
             if (gameObject.CompareTag("PlayerBullet"))
             {
                 waveManager.GetComponent<WaveManager>().enemiesKilled++;
-                if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+                if (GameObject.FindGameObjectsWithTag("Enemy").Length == 1)
                     waveManager.GetComponent<WaveManager>().ChangeWave();
                 print(GameObject.FindGameObjectsWithTag("Enemy").Length);
             }
