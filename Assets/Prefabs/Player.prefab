@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38ec2a93a15f1d4cac7e2d1325c0bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoints: 500
   speed: 10
   weaponMount: {fileID: 2547547323639766126}
   armory:
