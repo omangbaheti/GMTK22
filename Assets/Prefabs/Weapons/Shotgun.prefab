@@ -145,6 +145,6 @@ MonoBehaviour:
   bulletSpawner: {fileID: 6820275521846284989}
   bulletProjectile: {fileID: 2747230698573311905, guid: 388502d6df9661b4995c52472b81b898,
     type: 3}
-  cooldownTime: 0.01
+  cooldownTime: 0.35
   noOfBullets: 5
   spreadAngle: 20

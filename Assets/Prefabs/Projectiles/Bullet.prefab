@@ -129,3 +129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 35
   bulletLife: 0.5
+  damage: 10
+  target: Enemy

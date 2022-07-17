@@ -23,6 +23,10 @@ public class EnemySpawner : MonoBehaviour
     private void Spawn()
     {
         Instantiate(enemies[Random.Range(0, enemies.Length)]);
+        HealerEnemy[] healers = FindObjectsOfType<HealerEnemy>();
+
+        foreach (var healer in healers)
+            healer.GetComponent<RangedEnemyController>().ResetEnemies();
     }
 
     private void SpawnerReRoll(int number)

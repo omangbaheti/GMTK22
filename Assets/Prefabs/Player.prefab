@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 2547547325341686190}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  armory: []
+  weaponMount: {fileID: 2547547323639766126}
+  armory:
+  - {fileID: 6820275522049745686, guid: fd839a8925faefc47ac99050f27d339a, type: 3}
+  - {fileID: 6820275522049745686, guid: 4216333d0385f0341971b3cf3cdc4d93, type: 3}
 --- !u!1 &5604160577456997083
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IHealth
 {
+    [SerializeField] private float hitPoints = 500f;
     [SerializeField] private float speed = 5f;
     [SerializeField] private Transform weaponMount;
     [SerializeField] private List<GameObject> armory;
@@ -47,5 +48,18 @@ public class Player : MonoBehaviour
     {
         InputManager.MovementDirection -= Movement;
         RNGMechanic.ReRollEvent.RemoveListener(EquipWeapon);
+    }
+
+    public void AffectHealth(float changeInHealth)
+    {
+        if (hitPoints > 0)
+        {
+            hitPoints -= changeInHealth;
+            if (hitPoints.Equals(0) || hitPoints < 0)
+            {
+                Debug.Log($"{hitPoints}");
+                Destroy(gameObject);
+            }
+        }
     }
 }

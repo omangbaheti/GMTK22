@@ -26,6 +26,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     private bool _inRange;
     private NavMeshAgent _agent;
     private bool _moveBack;
+    private GameObject[] _enemies;
     private float _distance;
     
     private enum EnemyType
@@ -49,6 +50,12 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         _enemyProperties.attackRate = attackRate;
         InvokeRepeating(nameof(PerformAction), attackRate, attackRate);
     }
+
+    public void ResetEnemies()
+    {
+        _enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(_enemies);
+    }
     
     private void Start()
     {
@@ -63,7 +70,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         health = maxHealth;
         _transform = transform;
 
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        _enemies = GameObject.FindGameObjectsWithTag("Enemy");
         
         InvokeRepeating($"PerformAction", attackRate, attackRate);
 
@@ -74,16 +81,17 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         if (enemyType != EnemyType.Healer) return;
         if (transform.GetComponent<HealerEnemy>() == null)
             transform.AddComponent<HealerEnemy>();
-        _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(enemies);
+        _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(_enemies);
     }
 
     private void Update()
     {
+        health = Mathf.Clamp(health, 0, maxHealth);
         _transform.LookAt(_target);
 
         if (enemyType == EnemyType.Healer)
         {
-            transform.GetChild(0).LookAt(_lookAtTarget);   
+            transform.GetChild(0).LookAt(_lookAtTarget);
         }
         _moveBack = _distance < minRange;
         _distance = Vector3.Distance(_transform.position, _target.position);
@@ -104,23 +112,31 @@ public class RangedEnemyController : MonoBehaviour, IHealth
 
     private void PerformAction()
     {
-        if (!_inRange) return;
-        Instantiate(bullet, _transform.position, bulletDirection.rotation);
+        float distance = Vector3.Distance(_transform.position, _target.position);
+        float distanceLookAt = 10f;
+        if (_lookAtTarget != null)
+            distanceLookAt = Vector3.Distance(_transform.position, _lookAtTarget.position);
+        _inRange = distanceLookAt <= range;
+        if (_inRange)
+            Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
+        _moveBack = distance < minRange;
     }
 
     void IHealth.AffectHealth(float changeInHealth)
     {
-        if (enemyType != EnemyType.Healer)
+        if (health > 0)
         {
-            if (health > 0)
-                health -= changeInHealth;
-            else
+            health -= changeInHealth;
+            if (health.Equals(0) || health < 0)
+            {
+                Debug.Log($"{health}");
                 Destroy(gameObject);
-        }
-        else
-        {
-            if (health < maxHealth)
-                health += changeInHealth;
+                HealerEnemy[] healers = FindObjectsOfType<HealerEnemy>();
+                foreach (var healer in healers)
+                    healer.GetComponent<RangedEnemyController>().ResetEnemies();
+                print(healers[0].GetComponent<RangedEnemyController>()._enemies.Length);
+            }
         }
     }
 }
+
