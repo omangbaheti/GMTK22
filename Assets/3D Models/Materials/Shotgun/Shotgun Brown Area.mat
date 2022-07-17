@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7281639827748626973
+--- !u!114 &-8822399832323820168
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Brown
+  m_Name: Shotgun Brown Area
   m_Shader: {fileID: -6465566751694194690, guid: 66303358fc87d494b932e903d94e8b8c,
     type: 3}
   m_ValidKeywords: []
@@ -125,9 +125,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _Diffuse_Col: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Diffuse_Col: {r: 0.2735849, g: 0.14904135, b: 0.11201495, a: 1}
     - _Diffuse_Color: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fresnel_Col: {r: 1, g: 1, b: 1, a: 1}
