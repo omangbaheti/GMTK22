@@ -107,9 +107,9 @@ NavMeshSettings:
     serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 0.01
-    agentSlope: 4.8
-    agentClimb: 0.01
+    agentHeight: 0.6
+    agentSlope: 22.8
+    agentClimb: 0.32
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: dc6e6e0a3db98de4c8dba2000b0e1cb4, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4e8e0102ded282f46bb790653b594286, type: 2}
 --- !u!114 &19292860 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8881633015996984990, guid: e4587fa211e93a149b5af1d9a01475a5,
@@ -497,7 +497,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -751,7 +751,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1019,8 +1019,8 @@ GameObject:
   m_Name: Cube (2)
   m_TagString: Environment
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!4 &1730645838
 Transform:
@@ -1030,7 +1030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730645837}
   m_LocalRotation: {x: 0.17779839, y: -0, z: -0, w: 0.98406696}
-  m_LocalPosition: {x: 1.22, y: -3.99, z: -33.23}
+  m_LocalPosition: {x: 1.22, y: -3.99, z: -54.3}
   m_LocalScale: {x: 8.882579, y: 8.882579, z: 28.662306}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1113,7 +1113,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1167,7 +1167,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
