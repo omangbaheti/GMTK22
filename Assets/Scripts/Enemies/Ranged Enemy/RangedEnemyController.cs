@@ -137,5 +137,10 @@ public class RangedEnemyController : MonoBehaviour, IHealth
             }
         }
     }
+
+    private void OnDestroy()
+    {
+        ScoreCounter.IncrementScore?.Invoke();
+    }
 }
 

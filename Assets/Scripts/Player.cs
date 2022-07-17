@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.Text;
 
 public class Player : MonoBehaviour, IHealth
 {
@@ -10,9 +13,12 @@ public class Player : MonoBehaviour, IHealth
     [SerializeField] private Transform weaponMount;
     [SerializeField] private List<GameObject> armory;
     [SerializeField] private Animator player;
+    [SerializeField] private float gravity;
     
     private CharacterController character;
+    private CapsuleCollider characterCollider;
     private static readonly int Speed = Animator.StringToHash("speed");
+    private Vector3 gravityVector;
 
     private void OnEnable()
     {
@@ -29,6 +35,22 @@ public class Player : MonoBehaviour, IHealth
     void Start()
     {
         character = GetComponent<CharacterController>();
+        characterCollider = GetComponent<CapsuleCollider>();
+    }
+
+    private void Update()
+    {
+        //ApplyGravity();
+    }
+
+    void ApplyGravity()
+    {
+        if (character.isGrounded)
+        {
+            gravityVector = new Vector3(0, 0, 0);
+            return;
+        }
+        gravityVector = new Vector3(0f, gravity, 0f);
     }
 
     private void EquipWeapon(int weaponIndex)
@@ -65,5 +87,10 @@ public class Player : MonoBehaviour, IHealth
                 Destroy(gameObject);
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.LoadScene($"GameOver");
     }
 }

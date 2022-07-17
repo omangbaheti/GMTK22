@@ -127,10 +127,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7edac6e8e1ecbae4fada045ef83db2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 5
   bulletLife: 1
-  damage: 0
+  damage: 35
   target: Enemy
+  upwardThrust: 5
+  impactRadius: 4
   explosion: {fileID: 1003223988139939606, guid: 8509e8b76de01c14c8b997d7ae9d6bd5,
     type: 3}
   upwardThrust: 10

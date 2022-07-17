@@ -3,7 +3,6 @@ using UnityEngine;
 public class ChangeWeaponModel : MonoBehaviour
 {
     [SerializeField] private GameObject[] armory;
-    
 
     private void Awake()
     {
