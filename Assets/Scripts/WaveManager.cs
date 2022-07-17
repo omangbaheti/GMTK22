@@ -26,12 +26,12 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(nameof(StartWave));
     }
     
-    private void Start()
+    public void Start()
     {
         StartCoroutine(nameof(StartWave));
     }
 
-    private IEnumerator StartWave()
+    public IEnumerator StartWave()
     {
         yield return new WaitForSeconds(4f);
         _wave++;

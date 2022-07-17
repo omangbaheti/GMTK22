@@ -8,6 +8,7 @@ public class RNGMechanic : MonoBehaviour
     public static readonly UnityEvent<int> ReRollEvent = new UnityEvent<int>();
     
     [SerializeField] private int maxNumber;
+    [SerializeField] private WaveManager waveManager;
 
     private int _number;
     
@@ -18,8 +19,11 @@ public class RNGMechanic : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             ReRoll();
+            waveManager.Start();
+        }
     }
 
     public void ReRoll()
