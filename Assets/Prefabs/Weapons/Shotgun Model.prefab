@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &632619143
+--- !u!1 &1017912926375522839
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,30 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 632619144}
+  - component: {fileID: 1165151620930291652}
   m_Layer: 0
-  m_Name: Bullet Direction
+  m_Name: Bullet Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &632619144
+--- !u!4 &1165151620930291652
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632619143}
+  m_GameObject: {fileID: 1017912926375522839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.13}
+  m_LocalPosition: {x: -0.00511, y: 0, z: 0.0004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3160180692339945663}
+  m_Father: {fileID: 8118636424394640189}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3160180692339945636
+--- !u!1 &2495895600982641331
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,50 +39,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3160180692339945663}
-  - component: {fileID: 3160180692339945656}
-  - component: {fileID: 3160180692339945657}
-  - component: {fileID: 3160180692339945658}
-  - component: {fileID: 3160180692339945659}
-  - component: {fileID: 6562604084106292378}
+  - component: {fileID: 8118636424394640189}
+  - component: {fileID: 4609098267275425550}
+  - component: {fileID: 3279205855421018111}
+  - component: {fileID: 5419598511190764000}
+  - component: {fileID: 4385798569471242635}
   m_Layer: 0
-  m_Name: Healer
-  m_TagString: Healer Enemy
+  m_Name: Shotgun Model
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3160180692339945663
+--- !u!4 &8118636424394640189
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160180692339945636}
-  m_LocalRotation: {x: 0, y: -0.7150342, z: 0, w: 0.6990895}
-  m_LocalPosition: {x: 7.05, y: 0.5, z: 0.67}
+  m_GameObject: {fileID: 2495895600982641331}
+  m_LocalRotation: {x: -0, y: 0.00000008940694, z: 0.00000004470347, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 632619144}
+  - {fileID: 1165151620930291652}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -91.292, z: 0}
---- !u!33 &3160180692339945656
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4609098267275425550
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160180692339945636}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3160180692339945657
+  m_GameObject: {fileID: 2495895600982641331}
+  m_Mesh: {fileID: 2212009239438826721, guid: b7102bd79f87c79429d6927343a03295, type: 3}
+--- !u!23 &3279205855421018111
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160180692339945636}
+  m_GameObject: {fileID: 2495895600982641331}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -96,7 +95,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 314f3328f0afbe74abf3dbbfd85cf608, type: 2}
+  - {fileID: 1886820026795636259, guid: b7102bd79f87c79429d6927343a03295, type: 3}
+  - {fileID: 3780671244086486322, guid: b7102bd79f87c79429d6927343a03295, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,75 +118,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3160180692339945658
+--- !u!65 &5419598511190764000
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160180692339945636}
+  m_GameObject: {fileID: 2495895600982641331}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3160180692339945659
+  m_Size: {x: 0.012311852, y: 0.0030109715, z: 0.0072282758}
+  m_Center: {x: 0.0012357989, y: 0.000251784, z: -0.0019600438}
+--- !u!114 &4385798569471242635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160180692339945636}
+  m_GameObject: {fileID: 2495895600982641331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43ca1cfc8926c1842abb686cc072361f, type: 3}
+  m_Script: {fileID: 11500000, guid: 10c5d341fbfecbb4ab4096964f3b3a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValues:
-  - 3
-  - 5
-  - 10
-  - 15
-  - 20
-  - 1
-  speedValues: 020000000300000002000000040000000500000002000000
-  attackRates:
-  - 0.1
-  - 0.3
-  - 0.2
-  - 0.5
-  - 0.1
-  - 0.8
-  enemyType: 0
-  maxHealth: 10
-  health: 10
-  range: 5
-  minRange: 4
-  attackRate: 4.03
-  moveForwardSpeed: 3.5
-  moveBackSpeed: 5
-  bullet: {fileID: 2747230698573311964, guid: 66c9042759c336a47b050537bc7fa5f2, type: 3}
-  bulletDirection: {fileID: 632619144}
---- !u!195 &6562604084106292378
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160180692339945636}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.49999997
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  bulletSpawner: {fileID: 1165151620930291652}
+  bulletProjectile: {fileID: 2747230698573311905, guid: 388502d6df9661b4995c52472b81b898,
+    type: 3}
+  cooldownTime: 0.35
+  noOfBullets: 5
+  spreadAngle: 20

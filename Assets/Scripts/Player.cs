@@ -9,8 +9,10 @@ public class Player : MonoBehaviour, IHealth
     [SerializeField] private float speed = 5f;
     [SerializeField] private Transform weaponMount;
     [SerializeField] private List<GameObject> armory;
+    [SerializeField] private Animator player;
     
     private CharacterController character;
+    private static readonly int Speed = Animator.StringToHash("speed");
 
     private void OnEnable()
     {
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour, IHealth
     private void Movement(Vector3 movementDirection)
     {
         character.Move(speed * Time.deltaTime * movementDirection);
+        player.SetFloat(Speed, movementDirection.magnitude);
     }
     
     
