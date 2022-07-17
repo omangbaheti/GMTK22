@@ -1259,15 +1259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healer
       objectReference: {fileID: 0}
-    - target: {fileID: 3160180692339945636, guid: 005bb1259a8b1ef45be8485b2fb73743,
+    - target: {fileID: 3160180692339945659, guid: 005bb1259a8b1ef45be8485b2fb73743,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3160180692339945636, guid: 005bb1259a8b1ef45be8485b2fb73743,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
+      propertyPath: attackRate
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: 3160180692339945663, guid: 005bb1259a8b1ef45be8485b2fb73743,
         type: 3}

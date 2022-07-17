@@ -25,6 +25,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     private bool _inRange;
     private NavMeshAgent _agent;
     private bool _moveBack;
+    private GameObject[] _enemies;
     
     private enum EnemyType
     {
@@ -43,6 +44,12 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         attackRate = .1f;
         InvokeRepeating(nameof(PerformAction), attackRate, attackRate);
     }
+
+    public void ResetEnemies()
+    {
+        _enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(_enemies);
+    }
     
     private void Start()
     {
@@ -51,7 +58,7 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         health = maxHealth;
         _transform = transform;
 
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        _enemies = GameObject.FindGameObjectsWithTag("Enemy");
         
         InvokeRepeating($"PerformAction", attackRate, attackRate);
 
@@ -62,11 +69,12 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         if (enemyType != EnemyType.Healer) return;
         if (transform.GetComponent<HealerEnemy>() == null)
             transform.AddComponent<HealerEnemy>();
-        _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(enemies);
+        _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(_enemies);
     }
 
     private void Update()
     {
+        health = Mathf.Clamp(health, 0, maxHealth);
         _transform.LookAt(_target);
 
         if (enemyType == EnemyType.Healer)
@@ -90,9 +98,12 @@ public class RangedEnemyController : MonoBehaviour, IHealth
     private void PerformAction()
     {
         float distance = Vector3.Distance(_transform.position, _target.position);
-        _inRange = distance <= range;
-        if (!_inRange) return;
-        Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
+        float distanceLookAt = 10f;
+        if (_lookAtTarget != null)
+            distanceLookAt = Vector3.Distance(_transform.position, _lookAtTarget.position);
+        _inRange = distanceLookAt <= range;
+        if (_inRange)
+            Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
         _moveBack = distance < minRange;
     }
 
@@ -105,6 +116,10 @@ public class RangedEnemyController : MonoBehaviour, IHealth
             {
                 Debug.Log($"{health}");
                 Destroy(gameObject);
+                HealerEnemy[] healers = FindObjectsOfType<HealerEnemy>();
+                foreach (var healer in healers)
+                    healer.GetComponent<RangedEnemyController>().ResetEnemies();
+                print(healers[0].GetComponent<RangedEnemyController>()._enemies.Length);
             }
         }
     }
