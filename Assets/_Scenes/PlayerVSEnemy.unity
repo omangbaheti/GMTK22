@@ -1654,6 +1654,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2547547325341686190, guid: 48d85df4a2a7c28418ba2a5fa36b8b43,
+        type: 3}
+      propertyPath: armory.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547547325341686190, guid: 48d85df4a2a7c28418ba2a5fa36b8b43,
+        type: 3}
+      propertyPath: armory.Array.data[3]
+      value: 
+      objectReference: {fileID: 6820275522049745686, guid: 0595f62ccc61f6948b7e1bedd54d65f8,
+        type: 3}
     - target: {fileID: 2732810511365483772, guid: 48d85df4a2a7c28418ba2a5fa36b8b43,
         type: 3}
       propertyPath: m_IsActive

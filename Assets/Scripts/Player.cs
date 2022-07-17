@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 
 public class Player : MonoBehaviour, IHealth
@@ -89,6 +90,6 @@ public class Player : MonoBehaviour, IHealth
 
     private void OnDestroy()
     {
-        
+        SceneManager.LoadScene($"GameOver");
     }
 }

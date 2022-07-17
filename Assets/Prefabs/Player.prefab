@@ -544,6 +544,7 @@ MonoBehaviour:
   armory:
   - {fileID: 6820275522049745686, guid: fd839a8925faefc47ac99050f27d339a, type: 3}
   - {fileID: 6820275522049745686, guid: 4216333d0385f0341971b3cf3cdc4d93, type: 3}
+  - {fileID: 6820275522049745686, guid: bbb19b7b0c15de344b9e84fac03391d0, type: 3}
   player: {fileID: 7374783769213200698}
   gravity: 10
 --- !u!114 &4603730208778099785

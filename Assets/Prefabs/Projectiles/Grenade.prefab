@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 5
   bulletLife: 1
-  damage: 25
+  damage: 35
   target: Enemy
   upwardThrust: 5
   impactRadius: 4

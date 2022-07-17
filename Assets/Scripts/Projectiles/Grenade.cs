@@ -27,11 +27,12 @@ public class Grenade : Projectile
 
     private void Explode()
     {
-        var objectsInsideArea = Physics.OverlapSphere(Vector3.zero, impactRadius);
+        var objectsInsideArea = Physics.OverlapSphere(transform.position, impactRadius);
         foreach (Collider body in objectsInsideArea)
         {
             if (body.CompareTag(target))
             {
+                Debug.Log(body);
                 body.GetComponent<IHealth>().AffectHealth(damage);
             }
         }
