@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 43442
+  controlID: 44841
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 43421
+  controlID: 44842
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -397,9 +397,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.376402, y: 1.118717, z: 1.2358812}
+    m_Target: {x: 0.36800742, y: 1.2465568, z: 0.9112487}
     speed: 2
-    m_Value: {x: 0.376402, y: 1.118717, z: 1.2358812}
+    m_Value: {x: 0.36800742, y: 1.2465568, z: 0.9112487}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -446,13 +446,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.16802439, y: 0.68783647, z: -0.16857943, w: -0.6858017}
+    m_Target: {x: -0.020115376, y: 0.9134568, z: -0.045547947, w: -0.4039958}
     speed: 2
-    m_Value: {x: -0.16801648, y: 0.6878041, z: -0.16857149, w: -0.6857694}
+    m_Value: {x: -0.020114418, y: 0.91341335, z: -0.04554578, w: -0.4039766}
   m_Size:
-    m_Target: 0.59918034
+    m_Target: 0.7145337
     speed: 2
-    m_Value: 0.59918034
+    m_Value: 0.7145337
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 43443
+  controlID: 44810
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -667,8 +667,8 @@ MonoBehaviour:
     y: 0
     width: 333.59998
     height: 355.2
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -705,24 +705,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 32}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: ea67f6ff5ae5f7ffec60f8ff98ccf8ff2a58faff2e58faff3258faff3658faff3a58faff3e58faff4258faff1470faff2470faff3670faff6289faffd0e2faff7cf1ffffa6f1ffffdcf3ffff16fbffffec6e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: BulletSpawner
-        m_OriginalName: BulletSpawner
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -629476
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -800,21 +800,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3D Models
+    - Assets/Character/Materials'
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/3D Models
+  - Assets/Character/Materials'
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\tusha\Documents\GitHub\GMTK22
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: eef70000
-    m_LastClickedID: 63470
+    m_SelectedIDs: 1c270100
+    m_LastClickedID: 75548
     m_ExpandedIDs: 000000009a6a00009c6a00009e6a0000206c0000d0b5000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -870,7 +870,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
