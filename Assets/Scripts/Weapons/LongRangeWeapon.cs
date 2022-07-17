@@ -8,6 +8,8 @@ public abstract class LongRangeWeapon : MonoBehaviour
     [SerializeField] protected Transform bulletSpawner;
     [SerializeField] protected GameObject bulletProjectile;
     [SerializeField] protected float cooldownTime = 0.01f;
+    [SerializeField] protected GameObject muzzleFlash;
+    
     
     protected Transform playerTransform;
     protected bool canShoot = true;

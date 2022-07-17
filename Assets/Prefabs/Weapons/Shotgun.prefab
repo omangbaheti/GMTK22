@@ -94,5 +94,7 @@ MonoBehaviour:
   bulletProjectile: {fileID: 2747230698573311905, guid: 388502d6df9661b4995c52472b81b898,
     type: 3}
   cooldownTime: 0.35
+  muzzleFlash: {fileID: 3050377525533290135, guid: a5507e85b455c9442b192b1c8d3f36bb,
+    type: 3}
   noOfBullets: 5
   spreadAngle: 20

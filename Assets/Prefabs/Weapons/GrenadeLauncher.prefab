@@ -108,3 +108,5 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+  muzzleFlash: {fileID: 3050377525533290135, guid: a5507e85b455c9442b192b1c8d3f36bb,
+    type: 3}
