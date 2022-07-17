@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private WaveManager waveManager;
     
     [SerializeField] private GameObject[] enemies;
+    [SerializeField] private RNGMechanic rng;
     
     
     private float _spawnRate;
@@ -25,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
     private void OnEnable()
     {
         Start();
-        GetComponent<RNGMechanic>().ReRoll();
+        rng.GetComponent<RNGMechanic>().ReRoll();
     }
 
     private void Spawn()

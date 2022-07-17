@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveManager : MonoBehaviour
 {
@@ -8,7 +10,11 @@ public class WaveManager : MonoBehaviour
     public int enemiesSpawned;
         
     [SerializeField] private GameObject spawners;
+    [SerializeField] private GameObject waveNumberUI;
+    [SerializeField] private TMP_Text waveNumber;
 
+    private int _wave;
+    
     public void EndWave()
     {
         spawners.SetActive(false);
@@ -28,7 +34,17 @@ public class WaveManager : MonoBehaviour
     private IEnumerator StartWave()
     {
         yield return new WaitForSeconds(10f);
+        _wave++;
         enemiesSpawned = 0;
         spawners.SetActive(true);
+        waveNumberUI.SetActive(true);
+        waveNumber.text = "WAVE " + _wave;
+        StartCoroutine(Delay());
+    }
+
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(3f);
+        waveNumberUI.SetActive(false);
     }
 }
