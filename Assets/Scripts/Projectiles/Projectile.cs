@@ -15,13 +15,17 @@ public abstract class Projectile : MonoBehaviour
     
     private CinemachineVirtualCamera cinemachine;
 
-    private CinemachineBasicMultiChannelPerlin _cinemachineBasicMultiChannelPerlin;
+    private CinemachineBasicMultiChannelPerlin _cinemachineNoise;
 
+    private GameObject waveManager;
+    
     private void Awake()
     {
         cinemachine = GameObject.FindGameObjectWithTag("Cinemachine").GetComponent<CinemachineVirtualCamera>();
-        _cinemachineBasicMultiChannelPerlin =
+        _cinemachineNoise =
             cinemachine.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
+        waveManager = GameObject.FindGameObjectWithTag("Wave Manager");
     }
 
     public virtual void OnTriggerEnter(Collider body)
@@ -35,7 +39,15 @@ public abstract class Projectile : MonoBehaviour
                 ParticleSystem expl = Instantiate(explosion, transform.position, Quaternion.identity);
                 expl.Play();
                 
-                _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 1f;
+                _cinemachineNoise.m_AmplitudeGain = 1f;
+            }
+
+            if (gameObject.CompareTag("PlayerBullet"))
+            {
+                waveManager.GetComponent<WaveManager>().enemiesKilled++;
+                if (GameObject.FindGameObjectsWithTag("Enemy").Length == 1)
+                    waveManager.GetComponent<WaveManager>().ChangeWave();
+                print(GameObject.FindGameObjectsWithTag("Enemy").Length);
             }
                 
             Destroy(gameObject);

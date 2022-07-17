@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using Cinemachine;
 using UnityEngine;
 
 public class Grenade : Projectile
 {
     [SerializeField] private float upwardThrust;
+    [SerializeField] private float impactRadius = 4f;
     [SerializeField] private ParticleSystem explosionVFX;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
 
@@ -26,6 +28,7 @@ public class Grenade : Projectile
     {
         if (!other.CompareTag("Player"))
         {
+            Explode();
             Debug.Log("destroyed");
             ParticleSystem expl = Instantiate(explosionVFX, transform.position, Quaternion.identity);
             _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 1f;
@@ -34,4 +37,17 @@ public class Grenade : Projectile
         }
     }
 
+    private void Explode()
+    {
+        var objectsInsideArea = Physics.OverlapSphere(transform.position, impactRadius);
+        foreach (Collider body in objectsInsideArea)
+        {
+            if (body.CompareTag(target))
+            {
+                Debug.Log(body);
+                body.GetComponent<IHealth>().AffectHealth(damage);
+            }
+        }
+        Destroy(gameObject);
+    }
 }

@@ -81,7 +81,6 @@ public class RangedEnemyController : MonoBehaviour, IHealth
         if (enemyType != EnemyType.Healer) return;
         if (transform.GetComponent<HealerEnemy>() == null)
             transform.AddComponent<HealerEnemy>();
-        print(_enemies.Length);
         _lookAtTarget = GetComponent<HealerEnemy>().GetClosestEnemy(_enemies);
     }
 
@@ -137,6 +136,11 @@ public class RangedEnemyController : MonoBehaviour, IHealth
                     healer.GetComponent<RangedEnemyController>().ResetEnemies();
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        ScoreCounter.IncrementScore?.Invoke();
     }
 }
 
