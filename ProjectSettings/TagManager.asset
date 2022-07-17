@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Environment
   - Enemy Properties
+  - Healer Enemy
+  - Ranged Enemy
   layers:
   - Default
   - TransparentFX
